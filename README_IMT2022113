@@ -30,3 +30,6 @@ USER -
 
 find_book : Look for a book using its Book_ID
 logout: return to the main menu
+
+
+There is a default harcoded admin with the username and password as 'admin' . So, To add another admin and perform functions of the admin and to get a start of this program and start adding clients, this is the point to begin.
