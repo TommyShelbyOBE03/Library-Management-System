@@ -1,0 +1,32 @@
+README DOCUMENT for OPERATING SYSTEMS Mini Project
+
+Sparsh Salodkar IMT2022113
+
+The implementation of server and client side code has been done in 2 different python scripts which use a number of libraries and related function to implement features such as concurrent access, file locking, threading etc.
+
+
+(FIRST)
+RUN SERVER -
+	python3 my_Server.py
+	
+(NEXT)
+RUN CLIENT(s) - 
+	python3 my_Client.py
+
+	
+The server manages the library data and handles client requests. It listens for connections on port 9999 and provides the following functionalities:
+
+ADMIN ONLY - 
+
+add_book : Add a new book to the library
+remove_book : Remove a book from the library
+edit_book : Edit a book's info(name)
+find_book : Look for a book using Book_ID
+create_member : Add a new member (admin/user) 
+remove_member : removes a member from the system
+logout : Lets the current user logout, returns to the main menu
+
+USER - 
+
+find_book : Look for a book using its Book_ID
+logout: return to the main menu
