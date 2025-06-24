@@ -57,10 +57,13 @@ def handle_client(client_socket):
                 
                 elif action == 'add_book':
                     book_id = request_data.get('book_id')
-                    book_info = request_data.get('book_info')
-                    library_data['books'][book_id] = book_info
-                    response['status'] = 'success'
-                    save_data(library_data)
+                    if(len(book_id)!=4):
+                    	response['status'] = 'fail'
+                    else:
+                    	book_info = request_data.get('book_info')
+                    	library_data['books'][book_id] = book_info
+                    	response['status'] = 'success'
+                    	save_data(library_data)
                 
                 elif action == 'delete_book':
                     book_id = request_data.get('book_id')
@@ -136,4 +139,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
