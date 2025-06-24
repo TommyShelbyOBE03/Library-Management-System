@@ -22,9 +22,13 @@ def admin_panel():
 
         if selection == 'add_book':
             book_id = input("Enter Book ID: ")
-            book_info = input("Enter Book Information: ")
+            book_info = input("Enter Book Information. Example - Point Blank by Daniel Craig ")
             res = make_request('add_book', {'book_id': book_id, 'book_info': book_info})
-            print(res)
+            if(res['status'] == 'fail'):
+                print(res)
+            	print("Enter a 4 digit bookID")
+            else:
+            	print(res)
 
         elif selection == 'remove_book':
             book_id = input("Enter Book ID: ")
@@ -93,4 +97,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
